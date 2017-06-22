@@ -1,5 +1,5 @@
 # read in entire text file as ";" delimited and with a header
-dat <- read.table("household_power_consumption.txt", sep=";", header = TRUE)
+dat <- read.table("household_power_consumption.txt", sep=";", header = TRUE, stringsAsFactors = FALSE)
 
 # subset to 2007-02-01 and 2007-02-02. Assuming data format is d/m/yyyy
 dat2 <- subset(dat, dat$Date == "2/2/2007" | dat$Date == "1/2/2007")
